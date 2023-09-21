@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDePlateau", "JeuDePlateau\JeuDePlateau.csproj", "{F7E79137-EFCD-46F4-9ED3-3D7BF5AFCDCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{267436B8-73B2-4D36-B1A8-8907A33860C8}"
+	ProjectSection(SolutionItems) = preProject
+		JeuDePlateau\image\eau.png = JeuDePlateau\image\eau.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{EDA5AC27-0BE9-4F4C-B8E7-6DFB2EE5A171}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E79137-EFCD-46F4-9ED3-3D7BF5AFCDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E79137-EFCD-46F4-9ED3-3D7BF5AFCDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E79137-EFCD-46F4-9ED3-3D7BF5AFCDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E79137-EFCD-46F4-9ED3-3D7BF5AFCDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA5AC27-0BE9-4F4C-B8E7-6DFB2EE5A171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA5AC27-0BE9-4F4C-B8E7-6DFB2EE5A171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA5AC27-0BE9-4F4C-B8E7-6DFB2EE5A171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA5AC27-0BE9-4F4C-B8E7-6DFB2EE5A171}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37A9B5D8-2A4F-4274-A70B-C23194B57A4B}
+	EndGlobalSection
+EndGlobal
