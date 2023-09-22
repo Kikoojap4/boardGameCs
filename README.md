@@ -2,6 +2,10 @@
 
 Jeu de plateau de stratégie en C# réalisé pour mon IUT uniquement fait en C# avec .NET Windows Form
 
+## Sommaire 
+
+
+
 ## Présentation du projet
 
 Ce projet est un jeu de plateau réalisé pour l'IUT, les règles du jeu nous avont été donné, nous devions alors réaliser le jeu en C# avec .NET Windows Form.
@@ -37,5 +41,22 @@ Les joueurs jouent chacun à leur tour, du premier au dernier dans une **rotatio
 placement continue, il récupère **un** *jeton énergie* au lieu de placer un pion.<br> Une nouvelle rotation de placement est lancée s’il des pions peuvent au centre du plateau.<br> La phase de placement s’interrompt immédiatement s’il n’y a plus d’emplacements d’action libres, les pions non placés restent au centre du plateau
 
 
+### Déroulé d’une révolution – phase d’action :
 
-
+Quand les joueurs ont fini leurs placements, les actions sont accomplies. Chaque joueur reprend ses pions posés sur des emplacements d’actions pour effectuer **au plus une fois par joueur et par secteur** l’action du secteur correspondant, suivant les règles qui suivent.<br> Il est possible de poser plus de pions pour *bloquer* un secteur, mais pas pour bénéficier de ses effets deux fois dans un même tour.<br> Les actions sont résolues dans l’ordre des secteurs (1, 2, 3, 4) ; pour chaque secteur, on effectue une **rotation d’action**, c’est-à-dire que les actions de chaque secteur sont accomplies dans l’ordre des joueurs. L’ordre des secteurs est le suivant :
+1. Les joueurs qui ont un pion sur un emplacement d’action de la salle des machines récupèrent
+sept jetons énergie.
+2. Les joueurs qui ont un pion sur un emplacement d’action du laboratoire de recherche peuvent
+faire chacun l’une des deux actions suivantes :<br>
+- (a) Dépenser deux jetons énergie pour faire de la recherche, en piochant les deux premières cartes science de la pile. Si un joueur doit piocher des cartes et qu’il n’en reste plus assez, la défausse est mélangée et devient la nouvelle pile de cartes.<br>
+- (b) Dépenser deux jetons énergie par carte à valoriser pour valoriser leur recherche, suivant les cartes science qu’ils ont en main, pour les combinaisons suivantes – autant que souhaité :<br>
+- - i. Sept cartes de couleurs différentes permettent de marquer 50 points,<br>
+- - ii. Six cartes de couleurs différentes permettent de marquer 30 points,<br>
+- - iii. Quatre cartes de couleurs différentes permettent de marquer 10 points,<br>
+- - iv. Cinq cartes de couleur identique permettent de marquer 7 points,<br>
+- - v. Une carte de la couleur du joueur permet de marquer 3 points.<br>
+- - Dans chacune de ces situations, les cartes science sont défaussées, et le joueur avance son marqueur du nombre de points correspondant sur la fresque des points de victoire.<br>
+3. Les joueurs qui ont un pion sur un emplacement d’action du centre de recyclage peuvent effectuer une seule de ces deux actions :
+- (a) dépenser deux jetons énergie et récupérer quatre jetons eau; quand cette action est accomplie, chaque autre joueur peut choisir de dépenser un jeton énergie pour récupérer un jeton eau, ou (exclusif)<br>
+- (b) dépenser cinq jetons énergie et récupérer sept jetons eau; quand cette action est accomplie, chaque autre joueur pioche lui-même un jeton eau.<br>
+4. Les joueurs qui ont deux pions sur un emplacement d’action des quartiers d’équipage peuvent dépenser cinq jetons énergie pour récupérer un pion chercheur supplémentaire (les trois pions sont replacés au centre du plateau). Chaque joueur est limité à dix pions chercheur en tout. Chacun des pions qui était sur un emplacement d’action d’un secteur revient sur le centre du plateau dès l’action accomplie.
